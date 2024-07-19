@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array destruction
+        const arr = ["red", "yellow", "blue", "green", "white", "black"];
+        const [one, two] = arr;
+        console.log(one, two);
+
+        //Merging the arrays
+        const arr1 = [1, 2, 3];
+        const arr2 = [3, 4, 5];
+        console.log(arr1.concat(arr2)); 
+
+        //Array spreading
+        const arr3 = [1, 2, 3, 4, 5, 6];
+        const [one1, two1, ...rest] = arr3;
+        console.log(one1, two1, rest);
+
+        //Array maximum and minimum element
+         let arr6=[12,95,58,76,35,14,85];
+         let max=-10000;
+         let min=10000;
+         for(let i=0;i<arr6.length;i++)
+         {
+            if(arr6[i]>max)
+            {
+                max=arr6[i];
+            }
+            if(arr6[i]<min)
+            {
+                min=arr6[i];
+            }
+        }
+        console.log("The maximum element is "+max);
+        console.log("The minimum element is "+min);
+
+        //Array joining and splitting(using join() and split())
+        const [n, o, p] = '1,2,3'.split(',');
+        console.log(n, o, p); 
+
+        //Implementing stack in Arrays
+        function enter(ele){
+            arr7.push(ele);
+            console.log(arr7);
+            }
+        function pop(){
+            arr7.pop();
+            console.log(arr7);
+         }
+        const arr7=[2,3,4,5,6];
+        console.log("Implementing stack in Array");
+        console.log(arr7);
+        enter(9);
+        pop();
+
+        //Implementing queue in Arrays
+        let arr4=[2,3,4,5,6];
+        function addition(ele){
+        arr4.push(ele);
+        console.log(arr4);
+        }
+
+        function remove(){
+        arr4.shift();
+        console.log(arr4);
+        }
+        console.log("Implementing queue in Array");
+        console.log(arr4);
+        addition(8);
+        remove();
+
+        //Rotating an Array
+        function rotate(arr8, d)
+        {
+            let n = arr8.length;
+            for(let i=0; i<d; i++)
+            {
+                let temp = arr8[n-1];
+                for(let j=n-1; j>0; j--)
+                {
+                    arr8[j] = arr8[j-1];
+                }
+                    arr8[0] = temp;
+            }
+                return arr8;
+        }
+                    
+        console.log("Rotating an Array");
+        console.log(rotate([1,2,3,4,5],3));
+
+        //Intersection of Array
+        let arr04=[1,2,3,4,5];
+        let arr5=[2,3,4,6,7];
+        console.log("same elements in two arrays: \narray1: "+arr04+"\narray2: "+arr5);
+        for(i=0;i<arr04.length;i++){
+        for(j=0;j<arr5.length;j++){
+        if(arr04[i]==arr5[j])
+            console.log(arr04[i]);
+        }
+    }
+
+
+
+
+     
+
+
+    </script>
+</body>
+</html>
