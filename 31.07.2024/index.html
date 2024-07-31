@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //First program
+        //Finding the longest string in an array
+        function findLongestString(array) 
+        {
+            let longest = '';
+            for (let i = 0; i < array.length; i++) 
+            {
+                if (array[i].length > longest.length) 
+                {
+                    longest = array[i];
+                }
+            }
+            return longest;
+        }
+        console.log(findLongestString(strings)); 
+        
+        //Second program
+        //Finding the index of the first occurance
+        function findIndex(array, value) 
+        {
+           return array.indexOf(value);
+        }
+        let numbers = [4, 9, 3, 6, 2, 8, 5, 1, 7];
+        console.log(findIndex(numbers, 6)); 
+        console.log(findIndex(numbers, 10)); 
+
+        //Third program
+        //Finding the difference between two arrays
+        function arrayDiff(a, b) 
+        {
+            return a.filter(x => !b.includes(x));
+        }
+            const arr1 = [1, 2, 3, 4, 5];
+            const arr2 = [4, 5, 6, 7, 8];
+            console.log(arrayDiff(arr1, arr2)); 
+
+        //Fourth program
+        //Checking the array elements
+        const arr = [1, 2, 3, 4, 5];
+        const target = 3;
+        if (arr.includes(target)) 
+        {
+            console.log(`Element ${target} exists in the array`);
+        } 
+        else 
+        {
+            console.log(`Element ${target} does not exist in the array`);
+        }
+
+        //Fifth program
+        //Array intersection of two sets()
+        const arr3 = [1, 2, 3, 4, 5];
+        const arr4 = [4, 5, 6, 7, 8];
+        const intersection = arr3.filter(x => arr4.includes(x));
+        console.log(intersection); 
+    </script>
+</body>
+</html>
